@@ -1,0 +1,5 @@
+--To insert a data in table
+    -->py manage.py shell
+    --> >>> from author.models import Author
+    --> >>> Author.objects.all()
+    --> >>> Author.objects.create(first_name="Vasanth",last_name='Rajendran',age=23)
