@@ -1,0 +1,33 @@
+{% extends "base1.html" %}
+{% load static %}
+{% block titlepage %}
+collection
+{% endblock titlepage  %}
+
+{% block csspage %}
+<link rel="stylesheet" href="{%static 'author/index.css'%}"/>
+{% endblock csspage %}
+
+
+{% block content %}
+
+
+
+    {% comment %} <section id="welcome">
+        <h1>Introduction</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, error. Reiciendis vel praesentium soluta,
+            voluptatum accusantium voluptatibus fugiat velit hic dicta? Exercitationem repudiandae voluptatem
+            consequuntur impedit earum deleniti sapiente hic</p>
+    </section> {% endcomment %}
+    
+    <section>
+        <ul>
+            {% for book_in in book_collections %}
+            {% include "author/includes/post.html" %}
+            {% endfor %}
+            <div>{{title1}}</div>
+            <div>{{rating}}</div>
+            
+        </ul>
+    </section>
+{% endblock content %}
